@@ -7,7 +7,7 @@
 .container{
   display: grid;
   grid-template: 1fr 2fr 2fr / 1fr 3fr 1fr;
-  gap: 20px;
+  grid-gap: 20px 10px;
 }
 .header{
   display: grid;
@@ -33,6 +33,12 @@
 }
 .article{
   grid-area: 2 / 2 / 4 / 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.article > div{
+  
 }
 .side-article{
   grid-area: 2 / 3 / 4 / 4;

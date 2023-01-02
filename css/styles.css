@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 .container div{
-  border: 2px solid;
+  border: 1px solid;
 }
 .container{
   display: gird;
@@ -10,13 +10,20 @@
 .header{
   display: grid;
   grid-template: 1fr 1fr / 1fr;
+  align-items: center;
 }
 .header > div{
   display: grid;
-  grid-template: 1fr / 1fr 1fr;
+  grid-template: 1fr / 2fr 1fr;
 }
 .container .first-row>div, .container .second-row>div{
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.container>div .left{
+  justify-content: flex-start;
 }
 img{
   width: 40px;

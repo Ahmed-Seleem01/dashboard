@@ -6,14 +6,14 @@
 }
 .container{
   display: grid;
-  grid-template: 1fr 2fr 2fr / 1fr 3fr 1fr;
-  grid-gap: 20px 10px;
+  grid-template: 1fr 4fr / 1fr 4fr;
 }
 .header{
   display: grid;
   grid-template: 1fr 1fr / 1fr;
   align-items: center;
-  grid-area: 1 / 2 / 2 / 4;
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: beige;
 }
 .header > div{
   display: grid;
@@ -29,25 +29,36 @@
   justify-content: flex-start;
 }
 .sidebar{
-  grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 3 / 2;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  background-color: beige;
 }
 .article{
-  grid-area: 2 / 2 / 4 / 3;
+  grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  grid-template: 1fr 1fr / 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: rgb(181, 239, 114);
+}
+.projects > div{
+  background-color: lightblue;
+}
+.projects{
+  grid-area: 1 / 1 / 3 / 2;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
-.article > div{
-  
+.announcements{
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: lightblue;
 }
-.side-article{
-  grid-area: 2 / 3 / 4 / 4;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+.trending{
+  grid-area: 2 / 2 / 3 / 3;
+  background-color: lightblue;
 }
 img{
   width: 40px;

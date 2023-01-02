@@ -5,12 +5,15 @@
   border: 1px solid;
 }
 .container{
-  display: gird;
+  display: grid;
+  grid-template: 1fr 2fr 2fr / 1fr 3fr 1fr;
+  gap: 20px;
 }
 .header{
   display: grid;
   grid-template: 1fr 1fr / 1fr;
   align-items: center;
+  grid-area: 1 / 2 / 2 / 4;
 }
 .header > div{
   display: grid;
@@ -24,6 +27,18 @@
 }
 .container>div .left{
   justify-content: flex-start;
+}
+.sidebar{
+  grid-area: 1 / 1 / 4 / 2;
+}
+.article{
+  grid-area: 2 / 2 / 4 / 3;
+}
+.side-article{
+  grid-area: 2 / 3 / 4 / 4;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 img{
   width: 40px;

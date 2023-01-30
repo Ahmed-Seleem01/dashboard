@@ -8,7 +8,7 @@ body {
   padding: 0;
 }
 .container div {
-  border: 1px solid; 
+  /*border: 1px solid;*/ 
 }
 .container {
   display: grid;
@@ -18,29 +18,48 @@ body {
   grid-area: 1 / 2 / 2 / 3;
   display: grid;
   grid-template: 1fr 1fr / 1fr;
-  background-color: beige;
+  box-shadow: 0px 1px 5px 2px rgb(165, 164, 164);
+  z-index: 2;
 }
-.header > div {
-  display: grid;
-  grid-template: 1fr / 2fr 1fr;
-}
-.container .first-row > div,
-.container .second-row > div {
+
+.first-row , .second-row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 80px 0 30px;
+}
+.first-row div:nth-child(2){
+  padding: 0 20px;
+  font-size: 20px;
+  gap: 30px;
+}
+.first-row div:nth-child(1) input{
+  width: 30rem;
+  padding: 3px;
+  border-radius: 10px;
+  background-color: rgb(244, 242, 242);
+}
+
+.first-row div , .second-row div:not(div div:nth-child(2)){
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 20px;
 }
-.container > div .left {
-  justify-content: flex-start;
+.second-row div:nth-child(1) div:nth-child(2) p:nth-child(2){
+  font-size: 30px;
 }
 .sidebar {
   grid-area: 1 / 1 / 3 / 2;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  background-color: lightblue;
+  background-color: rgb(10, 160, 211);
   padding-left: 20px;
+  color: white;
+}
+.sidebar svg{
+  fill: white;
 }
 .article {
   grid-area: 2 / 2 / 3 / 3;
@@ -48,14 +67,17 @@ body {
   grid-template-columns: 5fr 2fr;
   gap: 20px;
   padding: 20px;
-  background-color: rgb(181, 239, 114);
+  background-color: rgb(218, 222, 224);
+}
+.article div{
+  border-radius: 10px
 }
 .projects > div {
   background-color: white;
   padding: 20px;
 }
 .projects {
-  background-color: lightblue;
+  
   grid-area: 1 / 1 / 3 / 2;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -63,14 +85,14 @@ body {
 }
 .announcements {
   grid-area: 1 / 2 / 2 / 3;
-  background-color: lightblue;
+  background-color: white;
 }
 .announcements div{
   padding: 20px;
 }
 .trending {
   grid-area: 2 / 2 / 3 / 3;
-  background-color: lightblue;
+  background-color: white;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -112,12 +134,14 @@ div.sidebar-block-1 {
 }
 
 button{
-  padding: 15px;
+  padding: 10px;
   border-radius: 20px;
   border: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   background-color: blue;
-  width: 100px;
+  width: 80px;
+  color: white;
+  font-weight: 700;
 }
 
 h2,h1{

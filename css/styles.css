@@ -34,8 +34,15 @@ body {
   font-size: 20px;
   gap: 30px;
 }
+.first-row div:nth-child(1){
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  /* border: 2px solid; */
+}
 .first-row div:nth-child(1) input{
-  width: 30rem;
+  max-width: 30rem;
+  width: 100%;
   padding: 3px;
   border-radius: 10px;
   background-color: rgb(244, 242, 242);
@@ -81,7 +88,7 @@ body {
   
   grid-area: 1 / 1 / 3 / 2;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
   gap: 20px;
 }
 .announcements {
@@ -114,7 +121,7 @@ div.sidebar-row {
   gap: 20px;
   font-weight: bold;
   font-size: 1.2rem;
-  height: 50px;
+  max-height: 50px;
   padding: 20px;
 }
 
@@ -124,7 +131,7 @@ div.sidebar-block-1 {
   gap: 20px;
   font-weight: bold;
   font-size: 2rem;
-  height: 100px;
+  max-height: 100px;
   padding: 20px;
 }
 
